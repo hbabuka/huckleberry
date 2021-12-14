@@ -1,3 +1,34 @@
+/* Design Tokens */
+
+:root {
+  /* Spacing */
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-96: 96px;
+  --spacing-128: 128px;
+
+  /* Font */
+  --font-size-m: 1rem;
+  --font-size-l: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+
+  /* Color palette */
+  --color-primary-green: hsl(160, 100%, 30%);
+  --color-secondary-gold-lighter: hsl(45, 100%, 50%);
+  --color-secondary-gold-darker: hsl(45, 100%, 40%);
+  --color-grays-black: hsl(0, 0%, 0%);
+  --color-grays-very-dark: hsl(0, 0%, 10%);
+  --color-grays-dark: hsl(0, 0%, 30%);
+  --color-grays-medium: hsl(0, 0%, 40%);
+  --color-grays-light: hsl(0, 0%, 60%);
+  --color-grays-white: hsl(0, 0%, 100%);
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -7,6 +38,79 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
-/* Add styles here! */
+h1, h2, p {
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-size: var(--font-size-m);
+  color: var(--color-grays-black);
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+.intro-chunk {
+  padding-top: var(--spacing-128);
+  margin-bottom: var(--spacing-64);
+  padding-inline: var(--spacing-32);
+  max-width: 440px;
+}
+
+.intro-chunk p {
+  font-size: var(--font-size-l);
+  margin-bottom: var(--spacing-24);
+}
+
+.title {
+  margin-bottom: var(--spacing-64);
+}
+
+main {
+  border-top: var(--spacing-8) solid var(--color-grays-medium);
+  background-color: var(--color-grays-light);
+  padding-top: var(--spacing-96);
+  min-height: 100%;
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card {
+  background-color: var(--color-grays-white);
+  border-bottom: var(--spacing-8) solid var(--color-grays-medium);
+  padding: var(--spacing-32);
+  padding-top: var(--spacing-8);
+}
+
+strong {
+  color: var(--color-primary-green);
+}
+
+.indented-heading {
+  background-color: var(--color-secondary-gold-lighter);
+  border-bottom: var(--spacing-8) solid var(--color-secondary-gold-darker);
+  padding-block: var(--spacing-24);
+  padding-inline: var(--spacing-48);
+  margin-left: calc(var(--spacing-48) * -1);
+  max-width: max-content;
+}
+
+.card p {
+  margin-top: var(--spacing-24);
+}
