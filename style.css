@@ -82,7 +82,7 @@ main {
   border-top: var(--spacing-8) solid var(--color-grays-medium);
   background-color: var(--color-grays-light);
   padding-top: var(--spacing-96);
-  min-height: 100%;
+  padding-bottom: var(--spacing-96);
 }
 
 .max-width-wrapper {
@@ -108,7 +108,7 @@ strong {
   padding-block: var(--spacing-24);
   padding-inline: var(--spacing-48);
   margin-left: calc(var(--spacing-48) * -1);
-  max-width: max-content;
+  width: max-content;
 }
 
 .card p {
